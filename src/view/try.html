@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        max-width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #4a4a4a;
+        margin-bottom: 10px;
+      }
+
+      .progress-container {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+      }
+
+      .progress-circle {
+        transform: rotate(-90deg); /* Rotate to start progress from top */
+      }
+
+      .progress-background {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 10;
+      }
+
+      .progress-bar {
+        fill: none;
+        stroke: #3b82f6;
+        stroke-width: 10;
+        stroke-dasharray: 314; /* 2 * π * r, where r is the radius (50 in this case) */
+        stroke-dashoffset: 314; /* Start with the circle fully hidden */
+        transition: stroke-dashoffset 1s ease-in-out;
+      }
+
+      .progress-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Creating Mobile App Design</h2>
+      <p>Progress</p>
+      <div class="progress-container" id="progress-container">
+        <svg class="progress-circle" width="120" height="120">
+          <circle cx="60" cy="60" r="50" class="progress-background"></circle>
+          <circle
+            cx="60"
+            cy="60"
+            r="50"
+            class="progress-bar"
+            id="progress-bar"
+          ></circle>
+        </svg>
+        <span id="progress-text" class="progress-text">0%</span>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const progressBar = document.getElementById("progress-bar");
+        const progressText = document.getElementById("progress-text");
+        const progressContainer = document.getElementById("progress-container");
+
+        const targetProgress = 75; // Target persentase
+        const incrementTime = 20; // Waktu dalam milidetik untuk setiap peningkatan persentase
+        const circumference = 2 * Math.PI * 50; // Keliling lingkaran (2 * π * r)
+
+        progressBar.style.strokeDasharray = circumference;
+        progressBar.style.strokeDashoffset = circumference;
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              let currentProgress = 0;
+
+              const interval = setInterval(() => {
+                if (currentProgress < targetProgress) {
+                  currentProgress++;
+                  progressText.textContent = currentProgress + "%";
+                  progressBar.style.strokeDashoffset =
+                    circumference - (currentProgress / 100) * circumference;
+                } else {
+                  clearInterval(interval); // Hentikan interval ketika target tercapai
+                }
+              }, incrementTime);
+            }
+          });
+        });
+
+        observer.observe(progressContainer);
+      });
+    </script>
+  </body>
+</html>

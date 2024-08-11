@@ -1,0 +1,95 @@
+@media only screen and (max-width: 568px) {
+  header {
+    background-image: url(/public/assets/images/Hero.svg);
+    background-size: cover;
+    max-height: 50rem;
+    padding-bottom: 6.938rem;
+    padding-top: 2.5rem;
+  }
+
+  header,
+  main,
+  footer {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    overflow: auto;
+  }
+
+  /* ul {
+    max-width: 39.5rem;
+  } */
+
+  li:not(.get-access) {
+    text-decoration: underline;
+    text-decoration-color: white;
+    font-size: 1rem;
+  }
+
+  li {
+    padding: 0.625rem auto;
+  }
+
+  .nav-link {
+    color: white !important;
+  }
+
+  .get-access {
+    background-color: #5468e780;
+    border-radius: 0.25rem;
+    font-size: 1.125rem;
+    padding: 0.625rem 2.75rem;
+  }
+
+  .get-access:hover {
+    background-color: #5468e780 !important;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    max-width: 35.188rem;
+    margin-top: 10rem;
+    color: white;
+  }
+
+  .info-text h1 {
+    font-size: 3.125rem;
+    line-height: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-text {
+    margin-bottom: 3rem;
+  }
+
+  .info-header p {
+    max-width: 24.813rem;
+  }
+
+  .info-text p {
+    font-size: 1.125rem;
+    line-height: 1.688rem;
+    padding-right: 2rem;
+  }
+
+  .input-container {
+    width: 18.625rem;
+    height: 2.938rem;
+    border-color: 2px solid #d1ecfd;
+  }
+
+  .input-container input {
+    color: #7676b2;
+    height: inherit;
+  }
+
+  input:focus {
+    outline: none;
+    width: 100%;
+  }
+
+  .input-container input::placeholder {
+    color: #7676b2;
+  }
+}

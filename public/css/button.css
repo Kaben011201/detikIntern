@@ -1,0 +1,21 @@
+.btn-primary {
+  background-color: #5468e7 !important;
+  border-radius: 0.25rem !important;
+  width: 14.563rem;
+  height: inherit;
+  border: none !important;
+}
+
+.btn:hover {
+  background-color: none !important;
+}
+
+.btn-link {
+  padding: 0px;
+  border-radius: 0px;
+  color: #5468e7;
+  width: 8.063rem;
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}

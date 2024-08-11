@@ -1,0 +1,54 @@
+footer {
+  background-color: #232340;
+  padding-top: 4.563rem;
+  padding-bottom: 2.313rem;
+}
+
+.footer-brand {
+  max-width: 10.5rem;
+}
+
+footer h3 {
+  font-size: 1.25rem;
+  color: #5468e7;
+}
+
+footer a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.company {
+  max-width: 8rem;
+}
+
+.features,
+.contact {
+  max-width: 11rem;
+}
+
+.footer-brand {
+  margin-right: 5rem;
+}
+
+.input-container-footer {
+  width: 16.75rem;
+  height: 2.938rem;
+  border-color: 2px solid #d1ecfd;
+  background: rgba(245, 245, 245, 0.24);
+  color: white;
+}
+
+.input-container-footer input {
+  background-color: transparent !important;
+  color: inherit;
+  height: inherit;
+}
+
+.input-container-footer input::placeholder {
+  color: white;
+}
+
+.copy-right {
+  margin-top: 10.688rem;
+}

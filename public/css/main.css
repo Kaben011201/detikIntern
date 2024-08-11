@@ -1,0 +1,272 @@
+main {
+  padding-top: 5.125rem;
+  padding-bottom: 10.25rem;
+}
+
+.first-section .dashboard-container {
+  margin-right: -8.75rem;
+  margin-left: 8.75rem;
+}
+
+.dashboard {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  box-shadow: 0px 13px 26px 0px rgba(118, 118, 178, 0.24);
+}
+
+.help {
+  position: absolute;
+  left: 20.44px;
+  bottom: 20.44px;
+}
+
+.patient-container {
+  position: absolute;
+  left: 181.38px;
+  top: 94.52px;
+}
+
+.activity-container {
+  position: absolute;
+  right: 30.44px;
+  top: 94.52px;
+}
+
+.activity-container .dot {
+  position: absolute;
+  left: 74.09px;
+  bottom: 49.82px;
+}
+
+.activity-container .info {
+  position: absolute;
+  left: 52.37px;
+  top: 38.96px;
+}
+
+.mentor-container {
+  position: absolute;
+  right: 30.44px;
+  top: 287.41px;
+  display: flex;
+  gap: 1.277rem;
+}
+
+.task-container {
+  position: absolute;
+  right: 30.44px;
+  bottom: 20.43px;
+  display: flex;
+  gap: 1.277rem;
+}
+
+.task-today {
+  position: absolute;
+  left: -107.66px;
+  top: 17px;
+  z-index: -2;
+}
+
+.today1 {
+  border-radius: 0.75rem;
+  box-shadow: 0px 13px 26px 0px rgba(118, 118, 178, 0.24);
+}
+
+#progress-container1,
+#progress-container2,
+#progress-container4,
+#progress-container5 {
+  position: absolute;
+  width: 11.177rem;
+  bottom: 40.87px;
+  right: 15.33px;
+  background-color: rgba(84, 104, 231, 0.5);
+  border-radius: 10px;
+}
+
+#progress-container3 {
+  position: absolute;
+  width: 11.177rem;
+  top: 123.64px;
+  left: 8.94px;
+  background-color: rgba(84, 104, 231, 0.5);
+  border-radius: 10px;
+}
+
+#progress-bar1,
+#progress-bar2,
+#progress-bar4,
+#progress-bar5 {
+  height: 6px;
+  width: 0;
+  background-color: #5468e7;
+  transition: width 1.4s ease-in-out;
+  border-radius: 10px;
+}
+
+#progress-bar3 {
+  height: 3px !important;
+  width: 0;
+  background-color: #5468e7;
+  transition: width 1.4s ease-in-out;
+  border-radius: 10px;
+}
+
+.progress-text {
+  position: absolute;
+  transform: translateX(-50%);
+  color: #5468e7;
+  top: -24px;
+  right: 0;
+}
+
+.progress-dot {
+  position: absolute;
+  left: 0;
+  height: 10px;
+  width: 11px;
+  padding: 5px;
+  border-radius: 50px;
+  border: 2px solid white !important;
+  background-color: #5468e7;
+  transition: left 1.4s ease-in-out;
+}
+
+.circle-container {
+  position: absolute;
+  bottom: -23.05px;
+  left: -23.77px;
+}
+
+.progress-circle {
+  transform: rotate(-90deg); /* Rotate to start progress from top */
+}
+
+.progress-background {
+  fill: none;
+  stroke: #5468e7;
+  stroke-width: 2px;
+  opacity: 0.1;
+}
+
+.progress-circle-bar {
+  fill: none;
+  stroke: #5468e7;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke-dasharray: 144; /* 2 * π * r, where r is the radius (50 in this case) */
+  stroke-dashoffset: 144; /* Start with the circle fully hidden */
+  transition: stroke-dashoffset 1s ease-in;
+}
+
+.progress-text-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+}
+
+.chat-mentor {
+  position: absolute;
+  left: -131px;
+  bottom: 147px;
+}
+
+.mentor3 {
+  box-shadow: 0px 12px 24px 0px rgba(84, 104, 231, 0.24);
+  border-radius: 0.75rem;
+}
+
+.typing-container {
+  position: absolute;
+  left: 19.89px;
+  bottom: 59.68px;
+  max-width: 15.854rem;
+  height: 3.109rem;
+}
+
+.send {
+  position: absolute;
+  left: 137px;
+  top: 294px;
+  box-shadow: 0px 8px 24px 0px rgba(118, 118, 178, 0.24);
+  z-index: 2;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+  margin-top: 7.5rem;
+}
+
+.second-figure {
+  position: relative;
+}
+
+figure {
+  overflow: hidden;
+}
+
+figure img {
+  max-width: 65.668rem;
+  max-height: 40.875rem;
+}
+
+figure .second-main-img {
+  transition: transform 300ms ease-in-out;
+}
+
+figure .second-main-img:hover {
+  transform: scale(1.05);
+  transition: transform 300ms ease-in-out;
+}
+
+.second-figure > div {
+  position: absolute;
+}
+
+.second-figure .widget-1 {
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+}
+
+.second-figure .widget-2 {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+}
+
+.second-figure .widget-3 {
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+}
+
+.section-text {
+  width: 28.125rem;
+  color: #232340;
+}
+
+.third-section {
+  margin-top: 12.5rem;
+}
+
+.third-section h1 {
+  font-size: 3.125rem;
+  line-height: 4rem;
+  margin-bottom: 7.5rem;
+}
+
+/* .card-container {
+  display: flex !important;
+  gap: 1.875rem;
+  align-items: start;
+} */
+
+.first-section-text p {
+  padding-right: 2rem;
+}
