@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  background-image: url(/public/assets/images/Hero.svg);
+  background-image: url(/images/Hero.svg);
   background-size: cover;
   max-height: 50rem;
   padding-bottom: 15.438rem;
